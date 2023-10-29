@@ -1,0 +1,53 @@
+<!-- Este é um arquivo HTML para uma tela de reserva -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Reserva</title> <!-- Título da página -->
+    <style>
+        /* Estilos CSS */
+        #fogos {
+            /* Estilos para a animação de fogos */
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            display: none;
+            animation: animarFogos 3s infinite;
+        }
+
+        @keyframes animarFogos {
+            /* Animação dos fogos com mudança de cor */
+            0% { background-color: yellow; }
+            50% { background-color: orange; }
+            100% { background-color: red; }
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-form">
+        <!-- Formulário de reserva -->
+        <form id="reservation-form">
+            <h1>Reserva Agora</h1> <!-- Título principal -->
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required> <!-- Campo de entrada para o nome -->
+            <!-- Outros campos do formulário -->
+            <button type="button" onclick="reservar()">Reservar Agora</button> <!-- Botão para realizar a reserva -->
+        </form>
+        <div id="fogos"></div> <!-- Div para a animação de fogos -->
+    </div>
+
+    <script>
+        // Script para realizar a reserva
+        function reservar() {
+            var fogos = document.getElementById('fogos');
+            fogos.style.display = 'block'; // Exibe a animação de fogos
+            setTimeout(() => {
+                fogos.style.display = 'none'; // Oculta a animação após 3 segundos
+                alert('Reserva concluída com sucesso!'); // Exibe um alerta de sucesso
+            }, 3000); // Tempo de exibição dos fogos (em milissegundos)
+        }
+    </script>
+</body>
+</html>

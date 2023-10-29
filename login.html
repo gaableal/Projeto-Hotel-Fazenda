@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        /* Define configurações gerais para o documento */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('imagens/img-fundo.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid #dd4719;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 45px;
+            text-shadow: 
+                -1px -1px 0 #ff5722,  
+                1px -1px 0 #ff5722,
+                -1px 1px 0 #ff5722,
+                1px 1px 0 #ff5722;
+            margin-bottom: 20px;
+        }
+
+        .form {
+            background: transparent; /* Alterado para transparente */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #ff5722;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #e64a19;
+        }
+
+        /* Media query para dispositivos com largura máxima de 800 pixels */
+        @media (max-width: 800px) {
+            .container {
+                width: 90vw; /* Define a largura do contêiner em 90% da largura da tela */
+            }
+
+            .form {
+                width: 80vw; /* Define um tamanho para o formulário em telas menores */
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tela de Login</h1>
+        <div class="form">
+            <input type="text" placeholder="Email do usuário">
+            <input type="password" placeholder="Senha">
+            <button id="login-btn">Login</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login-btn").addEventListener("click", function() {
+            window.location.href = "reserva.html";
+        });
+    </script>
+</body>
+</html>

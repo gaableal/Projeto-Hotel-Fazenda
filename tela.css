@@ -1,0 +1,112 @@
+/* Definições gerais para o corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-y: hidden;
+}
+
+/* Estilos para o contêiner principal do background */
+.background-image {
+    background-image: url('imagens/img-fundo.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Sobreposição para efeito visual do background */
+.overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Estilos para o título principal */
+h1 {
+    text-shadow: 
+        -1px -1px 0 #e64a19,
+        1px -1px 0 #e64a19,
+        -1px 1px 0 #e64a19,
+        1px 1px 0 #e64a19;
+}
+
+/* Estilos para o conteúdo do hotel */
+p {
+    text-shadow: 
+        -1px -1px 0 #e64a19,  
+        1px -1px 0 #e64a19,
+        -1px 1px 0 #e64a19,
+        1px 1px 0 #e64a19;
+}
+
+/* Estilos para o contêiner de informações do hotel */
+.container {
+    color: #fffcfb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    padding-top: 10vh;
+}
+
+.text-overlay {
+    background: rgba(0, 0, 0, 0.1); /* Fundo transparente para h1 e p */
+    padding: 0px;
+    text-align: center;
+    border: 2px solid #dd4719;
+    margin-top: 30px; /* Adiciona margem superior para mover o título para baixo */
+}
+
+/* Estilos para o título principal */
+h1 {
+    font-size: 45px;
+    margin-bottom: 1px; /* Reduz a margem inferior do 'h1' para 10 pixels */
+}
+
+/* Estilos para o texto informativo do hotel */
+.hotel-info {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 32px;
+}
+
+/* Estilos para os botões de ação */
+.action-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+}
+
+/* Estilos para cada botão de ação */
+.action-button {
+    display: block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o mouse por cima dos botões */
+.action-button:hover {
+    background: #e64a19;
+}
+
+/* Media query para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 30px; /* Tamanho do título ajustado para dispositivos móveis */
+    }
+
+    p {
+        font-size: 20px; /* Tamanho do texto nos campos de entrada para dispositivos móveis */
+    }
+}

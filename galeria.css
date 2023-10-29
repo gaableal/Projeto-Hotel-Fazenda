@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fa4f00; /* Define a cor de fundo do cabeçalho */
+    color: white; /* Define a cor do texto no cabeçalho */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 20px; /* Adiciona preenchimento interno */
+}
+
+main {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    min-height: 80vh; /* Define a altura mínima do conteúdo principal */
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribui as imagens uniformemente na linha */
+    padding: 0 10px; /* Define um espaçamento nas margens laterais */
+}
+
+.gallery-image {
+    width: calc(50% - 80px); /* Calcula a largura das imagens considerando o espaçamento das margens */
+    width: 48%; /* Define o tamanho de cada imagem para ocupar quase metade da linha */
+    height: auto;
+    margin-bottom: 80px; /* Adiciona um espaçamento entre as imagens */
+    transition: transform 0.3s; /* Adiciona uma transição suave ao passar o mouse sobre as imagens */
+}
+
+.gallery-image:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% quando o mouse está sobre a imagem */
+}
+
+.photo-gallery img {
+    max-width: 100%;
+    max-height: 400px; /* Define o tamanho máximo das imagens */
+    border: 2px solid #fa4f00; /* Adiciona uma borda à volta das imagens */
+    border-radius: 5px; /* Arredonda as bordas da imagem */
+    margin: 5px; /* Adiciona espaçamento entre as imagens */
+    height: auto; 
+}
+
+footer a {
+    color: #fa4f00; /* Altera a cor do link para laranja */
+    font-size: 20px; /* Aumenta o tamanho do link para 18 pixels */
+}
+
+@media (max-width: 768px) {
+    .photo-gallery {
+        justify-content: center; /* Centraliza as imagens */
+        padding: 0 20px; /* Reduz o espaçamento lateral */
+    }
+
+    .gallery-image {
+        width: calc(100% - 40px); /* Define a largura total das imagens */
+        margin-bottom: 20px; /* Reduz o espaçamento entre as imagens */
+    }
+}
+
+footer {
+    background-color: #f0f0f0; /* Define a cor de fundo do rodapé */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 10px; /* Adiciona preenchimento interno ao rodapé */
+}

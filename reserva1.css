@@ -1,0 +1,98 @@
+/* Define configurações gerais para o documento */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('imagens/img-fundo.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Centraliza o formulário na página */
+.centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #dd4719; /* Define a borda com cor laranja e espessura de 2px */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Altera a opacidade para 60% */
+    border-radius: 10px;
+    max-width: 600px;
+    margin-top: 80px; /* Distância do topo */
+}
+
+/* Estiliza os elementos do formulário */
+form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    margin: 0 auto; /* Para centralizar o formulário na página */
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5px; /* Aumenta o espaçamento entre os elementos */
+}
+
+/* Estiliza rótulos, campos de entrada e botões */
+label,
+input,
+button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0px; /* Aumenta a margem entre os elementos */
+    padding: 10px; /* Aumenta o preenchimento interno */
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estiliza os rótulos do formulário */
+label {
+    color: #ffffff; /* Altera a cor do texto do label para um tom de cinza (#333) */
+    font-size: 18px; /* Ajusta o tamanho da fonte do label */
+    text-shadow: 
+        -1px -1px 0 #dd4719,  
+        1px -1px 0 #dd4719,
+        -1px 1px 0 #dd4719,
+        1px 1px 0 #dd4719; /* Adiciona um efeito de sombra ao texto */
+        margin: 0.5px; /* Reduz um pouco a margem entre os elementos */
+}
+
+/* Estiliza campos de entrada */
+input {
+    font-size: 16px; /* Ajusta o tamanho da fonte do input */
+    color: #000000; /* Altera a cor do texto do input para um tom de cinza mais claro (#555) */
+}
+
+/* Estiliza o título principal */
+h1 {
+    font-size: 30px; /* Ajusta o tamanho da fonte do título */
+    color: #ff5722; /* Altera a cor do título para laranja (#ff5722) */
+    text-shadow: 
+        -1px -1px 0 #000000,  
+        1px -1px 0 #000000,
+        -1px 1px 0 #ff5722,
+        1px 1px 0 #ff5722; /* Adiciona um efeito de sombra ao texto */
+}
+
+/* Estiliza botões */
+button {
+    padding: 12px;
+    background-color: #e64a19;
+    color: white;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse por cima do botão */
+button:hover {
+    background-color: #d83c0d;
+}
+
+/* Media query para dispositivos com largura máxima de 768 pixels */
+@media only screen and (max-width: 768px) {
+    .centered-form {
+        background-color: rgba(255, 255, 255, 0.1); /* Reduz a opacidade para 10% */
+        margin-top: 13vh; /* Ajustando o espaçamento do topo para alinhar verticalmente */
+    }
+}

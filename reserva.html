@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reserva.css"> <!-- Referência ao arquivo de estilos externos -->
+    <title>Tela de Reserva</title>
+    <style>
+        /* Estilos adicionais para a mensagem de confirmação */
+        .message {
+            display: none; /* Inicialmente, a mensagem de confirmação está oculta */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centraliza a mensagem */
+            background-color: rgba(255, 251, 251, 0); /* Fundo escuro e semitransparente */
+            color: rgb(187, 155, 155);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            max-width: 80%; /* Limita a largura da mensagem */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-form" style="position: relative;"> <!-- Formulário centralizado na página -->
+        <form id="reservation-form">
+            <h1>Reserva Agora</h1> <!-- Título do formulário -->
+            <label for="name">Nome:</label> <!-- Campo para inserir o nome -->
+            <input type="text" id="name" name="name" required> <!-- Input de texto para o nome -->
+            <label for="email">E-mail:</label> <!-- Campo para inserir o e-mail -->
+            <input type="email" id="email" name="email" required> <!-- Input de e-mail -->
+            <label for="check-in">Data de Check-in:</label> <!-- Campo para data de check-in -->
+            <input type="date" id="check-in" name="check-in" required> <!-- Input de data de check-in -->
+            <label for="check-out">Data de Check-out:</label> <!-- Campo para data de check-out -->
+            <input type="date" id="check-out" name="check-out" required> <!-- Input de data de check-out -->
+            <button id="login-btn">Próximo</button> <!-- Botão para fazer a reserva -->
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("login-btn").addEventListener("click", function() {
+            window.location.href = "reserva1.html";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!-- Este é um arquivo HTML básico que contém um formulário para criar uma conta -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Importa um arquivo CSS externo -->
+    <style>
+        body {
+            /* Estilo para o corpo da página */
+            margin: 0;
+            padding: 0;
+            background-image: url('imagens/img-fundo.jpeg'); /* Define uma imagem de fundo */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            /* Estilos para o contêiner do formulário */
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border: 2px solid #dd4719;
+            width: 50%; /* Definindo a largura para 50% */
+            margin: 0 auto; /* Para centralizar o formulário na página */
+        }
+
+        input {
+            /* Estilos para os campos de entrada */
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box; /* Define box-sizing para evitar diferenças de largura */
+        }
+
+        button {
+            /* Estilos para o botão */
+            width: 100%;
+            padding: 10px;
+            background: #ff5722;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s; /* Efeito de transição suave no hover */
+        }
+
+        button:hover {
+            background: #e64a19; /* Mudança de cor ao passar o mouse por cima */
+        }
+
+        h2 {
+            /* Estilos para os cabeçalhos h2 */
+            color: #fff;
+            font-size: 45px; /* Define o tamanho do texto */
+        }
+
+        h2 {
+            /* Texto sombreado para dar um efeito de destaque */
+            text-shadow: 
+            -1px -1px 0 #ff5722,  
+            1px -1px 0 #ff5722,
+            -1px 1px 0 #ff5722,
+            1px 1px 0 #ff5722;
+        }
+
+        /* Media query para dispositivos com largura máxima de 800 pixels */
+        @media (max-width: 800px) {
+            .form-container {
+                width: 90vw; /* Define a largura do contêiner em 90% da largura da tela */
+            }
+        }
+
+    </style>
+    <title>Criar Conta</title> <!-- Título da página -->
+</head>
+<body>
+    <div class="form-container">
+        <h2>Crie uma Conta</h2> <!-- Título principal -->
+        <form id="myForm"> <!-- Adicione um ID ao formulário -->>
+            <!-- Campos do formulário -->
+            <input type="text" placeholder="Nome de usuário">
+            <input type="email" placeholder="E-mail">
+            <input type="password" placeholder="Senha">
+            <input type="password" placeholder="Confirmar senha">
+            <button id="submitButton">Criar Conta</button> <!-- Botão para criar a conta -->
+        </form>
+        <p id="successMessage" style="display: none; color: rgb(0, 0, 0); font-size: 29px;">Conta criada com sucesso!✅</p> <!-- Mensagem oculta por padrão -->
+    </div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário (comportamento padrão)
+
+            // Exibe a mensagem de sucesso após um pequeno atraso (pode ser ajustado)
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Limpa os campos do formulário após exibir a mensagem (opcional)
+            document.getElementById('myForm').reset();
+        });
+    </script>
+
+</body>
+</html>

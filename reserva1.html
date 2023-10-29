@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reserva1.css"> <!-- Referência ao arquivo de estilos externos -->
+    <title>Tela de Reserva</title>
+    <style>
+        /* Estilos adicionais para a mensagem de confirmação */
+        .message {
+            display: none; /* Inicialmente, a mensagem de confirmação está oculta */
+            position: fixed; /* Altere de absolute para fixed */
+            bottom: 20px; /* Posicione a mensagem 20px a partir da parte inferior */
+            left: 50%; /* Centralize horizontalmente */
+            transform: translateX(-50%); /* Centralize horizontalmente */
+            background-color: rgba(255, 251, 251, 0); /* Fundo escuro e semitransparente */
+            color: rgb(187, 155, 155);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            max-width: 80%; /* Limita a largura da mensagem */
+            text-align: center;
+            z-index: 999; /* Garanta que a mensagem esteja acima dos outros elementos */
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-form">
+        <form id="reservation-form">
+            <h1>Reserva Agora</h1>
+            <label for="adults">Quantidade de adultos:</label>
+            <input type="text" id="desired-amount" name="desired-amount" required placeholder="Acima de 18 anos">
+            <label for="children">Quantidade de menores:</label>
+            <input type="text" id="desired-amount" name="desired-amount" required placeholder="Menores de 18 anos">
+            <label for="desired-amount">Valor desejado por noite:</label>
+            <input type="text" id="desired-amount" name="desired-amount" required placeholder="Expectativa de valores">
+            <label for="desired-amount">Quantas noite:</label>
+            <input type="text" id="desired-amount" name="desired-amount" required placeholder="Quantas noites desejado">
+            <button onclick="redirectToNextPage()">Confirma reserva</button>
+        </form>
+        <p id="successMessage" style="display: none; color: rgb(255, 255, 255); font-size: 29px;">Reserva confirmada!✅</p> <!-- Mensagem oculta por padrão -->
+    </div>
+
+    <script>
+        document.getElementById('reservation-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário (comportamento padrão)
+
+            // Exibe a mensagem de sucesso após um pequeno atraso (pode ser ajustado)
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Limpa os campos do formulário após exibir a mensagem (opcional)
+            document.getElementById('reservation-form').reset();
+        });
+    </script>
+
+</body>
+</html>
